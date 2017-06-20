@@ -7,8 +7,8 @@ varying vec2 vUv;
 
 float noisify(vec2 a) {
   float n = 0.;
-  n += noise(vec3(a.xy * 5.2, a.y + time / 30.0)) * 0.5;
-  n += noise(vec3(sin(a.xy) * 10., a.y + time / 15.0)) * 0.01;
+  n += noise(vec3(a.xy * 2.2, a.y + time / 30.0)) * 0.5;
+  n += noise(vec3(sin(a.yx) * 10., a.y + time / 15.0)) * 0.01;
   return n;
 }
 
