@@ -15,9 +15,9 @@ float noisify(float a) {
 void main() {
   // UV coords are inverted
   vec2 uv = 1.0 - vUv;
-  float x = mod(uv.x + noisify(uv.y), 1.0);
-  float y = mod(uv.y + noisify(uv.x), 1.0);
+  float x = uv.x + noisify(uv.y);
+  float y = uv.y + noisify(uv.x);
   gl_FragColor = texture2D(texture, vec2(y, x));
-  // gl_FragColor = vec4(uv, 0.0, 1.0);
+  // gl_FragColor = vec4(x, y, 0.0, 1.0);
 }
 
