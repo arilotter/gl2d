@@ -17,6 +17,7 @@ void main() {
   vec2 uv = 1.0 - vUv;
   float x = mod(uv.x + noisify(uv.y), 1.0);
   float y = mod(uv.y + noisify(uv.x), 1.0);
+  // gl_FragColor = vec4(y, x, 0.0, 1.0);
   gl_FragColor = texture2D(texture, vec2(y, x));
   // gl_FragColor = vec4(uv, 0.0, 1.0);
 }

@@ -18,6 +18,9 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "@arilotter/clmutils": "^3.0.0",
+    "clmtrackr": "^1.0.1",
+    "getboundingbox": "^1.0.0",
     "getusermedia": "^2.0.1",
     "glsl-noise": "0.0.0",
     "primitive-quad": "^2.0.0",

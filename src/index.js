@@ -2,16 +2,19 @@ import createFullscreenReglContext from "regl";
 import createQuad from "./quad";
 import getWebcam from "./webcam";
 
+import clm from "clmtrackr/clmtrackr";
+import faceModel from "clmtrackr/models/model_pca_20_svm";
+import getBounds from "getboundingbox";
 const regl = createFullscreenReglContext();
 
 const drawQuad = createQuad(regl);
 
 const webcam = getWebcam({
   regl,
-  done: loop
+  callback: loop
 });
 
-function loop(texture) {
+function loop({ texture, video }) {
   regl.frame(({ viewportWidth, viewportHeight }) => {
     regl.clear({
       color: [0, 0, 0, 255],
