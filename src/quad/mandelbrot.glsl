@@ -1,4 +1,4 @@
-const int numIterations = 50;
+const int numIterations = 10;
 float mandelbrot(vec2 uv, float scale, vec2 center) {
   vec2 z, c;
 
